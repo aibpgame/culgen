@@ -24,4 +24,4 @@ async def on_message(message):
         await channel.send(msg)
         return None
  
-client.run('ODU2MDMxOTY5OTYzMjc4Mzk2.YM7H5Q.1seBmcyUbB9r4B22t5TfGJHX1L8')
+client.run('token')
