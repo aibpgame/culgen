@@ -1,7 +1,8 @@
 import discord
 import asyncio
 import random
- 
+import os
+
 client = discord.Client()
  
 @client.event
@@ -13,7 +14,7 @@ async def on_ready():
  
 @client.event
 async def on_message(message):
-    if message.content.startswith('!test'):
+    if message.content.startswith('!생성'):
         channel = message.channel
         num = random.randrange(1000, 9999)
         num1 = random.randrange(1000, 9999)
@@ -24,4 +25,4 @@ async def on_message(message):
         await channel.send(msg)
         return None
  
-client.run('token')
+client.run(os.environ['token'])
